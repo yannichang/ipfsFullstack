@@ -32,6 +32,6 @@ More details about istalling vue/cli and how to create a project can be found in
 After the frontend server is running, copy and paste the localhost address in the browser. 
 To store your data, please enter the key and data in the form. Note that the key needs to be 16, 24 or 32 bytes due to our encryption design. <br>
 A CID will be returned after you click [submit] button. <br>
-To get the data you stored from IPFS, you need to provide key and CID. <br>
-Your data will be printed!
+To get the data you stored in IPFS, you need to provide the key and CID. <br>
+Your decrypted data will be printed!
 
