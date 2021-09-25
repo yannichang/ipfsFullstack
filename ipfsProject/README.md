@@ -26,18 +26,12 @@ More details about istalling vue/cli and how to create a project can be found in
 <code>go run projectServer.go</code>
 <h3>Start Frontend Server</h3>
 <code>npm run serve</code> <br>
-<code>npm run build</code>
 
 ---
 <h2>USAGE</h2>
-For store your data, enter the key and data in the form. It should be noted that the key key needs tp be 16, 24 or 32 bytes due to the our encryption design. <br>
-A CID will be provided after you click [submit]. <br>
-For getting the data you stored, you need the same key and the returned CID. <br>
+After the frontend server is running, copy and paste the localhost address in the browser. 
+To store your data, please enter the key and data in the form. Note that the key needs to be 16, 24 or 32 bytes due to our encryption design. <br>
+A CID will be returned after you click [submit] button. <br>
+To get the data you stored from IPFS, you need to provide key and CID. <br>
 Your data will be printed!
 
----
-
-<h2>TEST</h2>
-For testing API for the backend (run on localhost:1323), we can also use curl or postman to check the output before building the frontend.<br>
-A simple example is shown here. In the terminal, run: <br>
-<code>curl -X POST localhost:1323/add -d 'key=abcdabcdabcdabcd' -d 'data=test_message'</code>
