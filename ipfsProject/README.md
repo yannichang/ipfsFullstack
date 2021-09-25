@@ -3,8 +3,7 @@ This is a full stack project based on Go and Vue.js. <br>
 The objective is to store and retrieve encrypted data from IPFS.
 <h2>INSTALL</h2>
 <h3>Install Go</h3>
-The isntallation of Go can be found in the
-https://golang.org/doc/install.
+The isntallation of Go can be found in https://golang.org/doc/install.
 <h3>go-ipfs-api</h3>
 <code>go get -u github.com/ipfs/go-ipfs-api</code><br>
 Details about ipfs can be found in https://github.com/ipfs/go-ipfs-api and https://docs.ipfs.io/.
