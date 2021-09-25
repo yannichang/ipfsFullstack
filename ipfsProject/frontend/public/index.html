@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!-- <link rel="icon" href="<%= BASE_URL %>favicon.ico"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="/stylesheets/home.css">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+  </head>
+  <body>
+    <div id="app"></div>
+    
+    <div class="hero is-full is-info is-bold is-max-widescreen">
+        <div class="hero-body is-full">
+        <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+        
+          <h2 class="title has-text-centered is-full flex-column">IPFS Post Processing</h2>
+          <div class="box d-flex">
+            <!-- our post query form ===================== -->
+            <form id="postform" @submit.prevent="sendForm">
+              <!-- key used for post method-->
+              <div class="field">
+                <label class="label">Key</label>
+                <input type="text" class="input" name="key" v-model="key" placeholder="Enter your key (16 characters)">
+              </div>
+
+              <!-- data used for post method-->
+              <div class="field">
+                <label class="label">Data</label>
+                <input type="text" class="input" name="data" v-model="data">
+              </div>
+        
+              <!-- submit button -->
+              <div class="control">
+                <button type="submit" class="button is-link">Submit</button>
+              </div>
+              <div class="card text-center m-3">
+                  <h5 class="card-header">Your post request info</h5>
+                  <div class="card-body">Your entered key: {{ key }}</div>
+                  <div class="card-body">Your entered data: {{ data }}</div>
+                  <div class="card-body">Post status: {{ postStatus }} </div>
+                  <div class="card-body">The CID for encoded data is: {{ encodedData }} </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        </div>
+        <div class="hero-body is-full">
+        <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+        
+          <h2 class="title has-text-centered is-full flex-column">IPFS Get Processing</h2>
+          <div class="box d-flex">
+            <!-- our get query form ===================== -->
+              <form id="getform" @submit.prevent="getForm">
+                    <!-- key used for get method-->
+                    <div class="field">
+                      <label class="label">Key</label>
+                      <input type="text" class="input" name="key" v-model="key" placeholder="Enter your key (16 characters)">
+                    </div>
+          
+                    <!-- data used for get method-->
+                    <div class="field">
+                      <label class="label">CID</label>
+                      <input type="text" class="input" name="data" v-model="data">
+                    </div>
+              
+                    <!-- submit button -->
+                    <div class="control">
+                        <button type="submit" class="button is-link">Submit</button>
+                    </div>
+                    <div class="card text-center m-3">
+                        <h5 class="card-header">Your get request info</h5>
+                        <div class="card-body">Your entered key: {{ key }}</div>
+                        <div class="card-body">Your entered CID: {{ data }}</div>
+                        <div class="card-body">The stored data (decoded) is: {{ decodedData }}</div>
+                    </div>
+              </form>
+            </div>
+        </div>
+        </div>
+    </div>
+  </body>
+</html>
